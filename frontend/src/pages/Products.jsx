@@ -102,7 +102,7 @@ function Products() {
                 <tr key={product.id}>
                   <td>{product.name}</td>
                   <td><code>{product.sku}</code></td>
-                  <td>${product.price.toFixed(2)}</td>
+                  <td>₹{product.price.toFixed(2)}</td>
                   <td>{product.stock}</td>
                   <td>
                     <button className="btn btn-secondary btn-sm" onClick={() => openEdit(product)} style={{ marginRight: '8px' }}>Edit</button>

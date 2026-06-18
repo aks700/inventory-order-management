@@ -66,7 +66,7 @@ function Dashboard() {
                 <tr key={order.id}>
                   <td>#{order.id}</td>
                   <td><span className={`badge badge-${order.status}`}>{order.status}</span></td>
-                  <td>${order.total_amount.toFixed(2)}</td>
+                  <td>₹{order.total_amount.toFixed(2)}</td>
                   <td>{new Date(order.created_at).toLocaleDateString()}</td>
                 </tr>
               ))

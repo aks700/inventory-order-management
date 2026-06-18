@@ -113,7 +113,7 @@ function Orders() {
                   <td>#{order.id}</td>
                   <td>{getCustomerName(order.customer_id)}</td>
                   <td>{order.items.length} item(s)</td>
-                  <td>${order.total_amount.toFixed(2)}</td>
+                  <td>₹{order.total_amount.toFixed(2)}</td>
                   <td><span className={`badge badge-${order.status}`}>{order.status}</span></td>
                   <td>{new Date(order.created_at).toLocaleDateString()}</td>
                   <td>
@@ -164,7 +164,7 @@ function Orders() {
                     >
                       <option value="">Select product...</option>
                       {products.map(p => (
-                        <option key={p.id} value={p.id}>{p.name} (Stock: {p.stock}) - ${p.price}</option>
+                        <option key={p.id} value={p.id}>{p.name} (Stock: {p.stock}) - ₹{p.price}</option>
                       ))}
                     </select>
                     <input
